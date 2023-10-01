@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+
+
+
+.columnLine{display: flex; margin-bottom:7px;}
+.lines{display: flex; margin-top: 3px;}
+
+.yearLine{display: flex; margin-right: 0.5em; }
+.ageLine{display: flex; margin-right: 0.5em;  }
+
+.hiddenSpace{height:7px;}
+.hiddenBtn{visibility: hidden;}
+.hiddenGap{width: 7px;}
+
+.rowNumber{    
+  height: 26px;  width: 26px;
+  font-weight:bold;
+  border-radius: 3px;
+  margin-right: 0.7em; padding: 0px;
+  
+}
+
+div.yearLine button{
+  height: 26px;  width: 26px;
+  font-size: 10px; font-weight:bold; color: blue;
+  border-radius: 3px; 
+  padding: 0;  margin-right: 3px;
+}
+div.ageLine button{
+  height: 26px;  width: 26px;
+  border-radius: 3px; 
+  font-weight:bold;
+  margin-right: 3px;  padding: 0px;
+  background: DodgerBlue;
+}
+
+
+/* future age colored green start
+Can delete yearly to make button blue */
+#age40btn,#age41btn,#age42btn,#age43btn,#age44btn,#age45btn,#age46btn,#age47btn,#age48btn,#age49btn,#age50btn,#age51btn,#age52btn,#age53btn,#age54btn,#age55btn,#age56btn,#age57btn,#age58btn,#age59btn,#age60btn,#age61btn,#age62btn,#age63btn,#age64btn,#age65btn,#age66btn,#age67btn,#age68btn,#age69btn,#age70btn,#age71btn,#age72btn,#age73btn,#age74btn,#age75btn	,#age76btn,#age77btn,#age78btn,#age79btn,#age80btn,#age81btn,#age82btn,#age83btn,#age84btn,#age85btn,#age86btn,#age87btn,#age88btn,#age89btn,#age90btn,#age91btn,#age92btn,#age93btn,#age94btn,#age95btn,#age96btn,#age97btn,#age98btn,#age99btn,#age100btn{ background: green;}
+/* future age colored green end */
+/* future age colored green end */
+/* future age colored green end */
+
+
+/* special marks start*/
+/* special marks start*/
+/* special marks start*/
+#y1 {  font-size: 12px;  background: darkorange;}
+#age39btn { animation: presentYear 2s infinite alternate-reverse ; }
+#age45btn,#age55btn,#age65btn { background: darkorange; }
+#age75btn{ background: red;}
+#age60btn, #age100btn{  background: red; }
+/* special marks end*/
+/* special marks end*/
+/* special marks end*/
+
+@keyframes presentYear {
+  from {background-color: DarkOrange;}
+  to {background-color: Crimson;}
+}
+
+
+
+
+
+</style>
+</head>
+<body>
+
+
+<div class='columnLine'>
+  <button class='rowNumber'>0</button>
+  <div class='yearLine'>
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>4</button> 
+    <button>5</button>
+    <div class='hiddenGap'></div> 
+    <button>6</button> 
+    <button>7</button> 
+    <button>8</button> 
+    <button>9</button> 
+    <button>10</button>    
+  </div>
+</div>
+
+<div class='lines'>
+  <button class='rowNumber'><span id='y1'>Y84<span></button>
+    <div class='yearLine'>
+      <button>	1985	</button>
+      <button>	1986	</button>
+      <button>	1987	</button>
+      <button>	1988	</button>
+      <button>	1989	</button>
+
+      <div class='hiddenGap'></div> 
+
+      <button>	1990	</button>
+      <button>	1991	</button>
+      <button>	1992	</button>
+      <button>	1993	</button>
+      <button>	1994	</button>
+
+    </div>
+    </div>
+
+    <div class='lines'>
+      <button class='rowNumber'>10</button>
+      <div class='ageLine'>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button> 
+        <button>5</button>
+        <div class='hiddenGap'></div> 
+        <button>6</button> 
+        <button>7</button> 
+        <button>8</button> 
+        <button>9</button> 
+        <button>10</button>    
+      </div>
+    </div>
+
+    <div class='lines'>
+      <button class='rowNumber'><span id='y2'>Y</span></button>
+      <div class='yearLine'>
+        <button>	1995	</button>
+        <button>	1996	</button>
+        <button>	1997	</button>
+        <button>	1998	</button>
+        <button>	1999	</button>
+
+        <div class='hiddenGap'></div> 
+        <button>	2000	</button>
+        <button>	2001	</button>
+        <button>	2002	</button>
+        <button>	2003	</button>
+        <button>	2004	</button>
+
+      </div>
+    </div>
+
+
+    <div class='lines'>
+      <button class='rowNumber'>20</button>
+      <div class='ageLine'>
+        <button>	11	</button>
+        <button>	12	</button>
+        <button>	13	</button>
+        <button>	14	</button>
+        <button>	15	</button>
+
+        <div class='hiddenGap'></div> 
+        <button>	16	</button>
+        <button>	17	</button>
+        <button>	18	</button>
+        <button>	19	</button>
+        <button>	20	</button>
+
+      </div>
+    </div>
+
+    <div class='hiddenSpace'></div>
+
+
+    <div class='lines'>
+      <button class='rowNumber'><span id='y3'>Y</span></button>
+      <div class='yearLine'>
+        <button>	2005	</button>
+        <button>	2006	</button>
+        <button>	2007	</button>
+        <button>	2008	</button>
+        <button>	2009	</button>
+
+
+        <div class='hiddenGap'></div> 
+        <button>	2010	</button>
+        <button>	2011	</button>
+        <button>	2012	</button>
+        <button>	2013	</button>
+        <button>	2014	</button>
+
+      </div>
+    </div>
+
+    <div class='lines'>
+      <button class='rowNumber'>30</button>
+      <div class='ageLine'>
+        <button>	21	</button>
+        <button>	22	</button>
+        <button>	23	</button>
+        <button>	24	</button>
+        <button>	25	</button>
+
+        <div class='hiddenGap'></div> 
+        <button>	26	</button>
+        <button>	27	</button>
+        <button>	28	</button>
+        <button>	29	</button>
+        <button>	30	</button>
+
+      </div>
+    </div>
+
+    <div class='lines'>
+      <button class='rowNumber'><span id='y4'>Y</span></button>
+      <div class='yearLine'>
+
+        <button>	2015	</button>
+        <button>	2016	</button>
+        <button>	2017	</button>
+        <button>	2018	</button>
+        <button>	2019	</button>
+
+
+        <div class='hiddenGap'></div> 
+
+        <button>	2020	</button>
+        <button>	2021	</button>
+        <button>	2022	</button>
+        <button>	2023	</button>
+        <button>	2024	</button>
+
+      </div>
+    </div>
+
+
+    <div class='lines'>
+      <button class='rowNumber'>40</button>
+      <div class='ageLine'>
+        <button>	31	</button>
+        <button>	32	</button>
+        <button>	33	</button>
+        <button>	34	</button>
+        <button>	35	</button>
+
+
+        <div class='hiddenGap'></div> 
+        <button>	36	</button>
+        <button>	37	</button>
+        <button>	38	</button>
+        <button id='age39btn'>64</button>
+        <button id='age40btn'>
+          40	</button>
+
+
+      </div>
+    </div>
+
+    <div class='hiddenSpace'></div>
+
+
+
+
+    <div class='lines'>
+      <button class='rowNumber'><span id='y5'>Y</span></button>
+      <div class='yearLine'>
+        <button>	2025	</button>
+        <button>	2026	</button>
+        <button>	2027	</button>
+        <button>	2028	</button>
+        <button>	2029	</button>
+
+
+        <div class='hiddenGap'></div> 
+
+        <button>	2030	</button>
+        <button>	2031	</button>
+        <button>	2032	</button>
+        <button>	2033	</button>
+        <button>	2034	</button>
+
+
+      </div>
+    </div>
+
+    <div class='lines'>
+      <button class='rowNumber'>50</button>
+      <div class='ageLine'>
+
+        <button id='age41btn'>	41	</button>
+        <button id='age42btn'>	42	</button>
+        <button id='age43btn'>	43	</button>
+        <button id='age44btn'>	44	</button>
+        <button id='age45btn'>	45	</button>
+
+
+        <div class='hiddenGap'></div> 
+        <button id='age46btn'>	46	</button>
+        <button id='age47btn'>	47	</button>
+        <button id='age48btn'>	48	</button>
+        <button id='age49btn'>	49	</button>
+        <button id='age50btn'>	50	</button>
+
+
+      </div>
+    </div>
+
+    <div class='lines'>
+      <button class='rowNumber'><span id='y6'>Y</span></button>
+      <div class='yearLine'>
+
+        <button>	2035	</button>
+        <button>	2036	</button>
+        <button>	2037	</button>
+        <button>	2038	</button>
+        <button>	2039	</button>
+
+
+        <div class='hiddenGap'></div> 
+
+        <button>	2040	</button>
+        <button>	2041	</button>
+        <button>	2042	</button>
+        <button>	2043	</button>
+        <button>	2044	</button>
+
+
+      </div>
+    </div>
+
+
+    <div class='lines'>
+      <button class='rowNumber'>60</button>
+      <div class='ageLine'>
+
+        <button id='age51btn'>	51	</button>
+        <button id='age52btn'>	52	</button>
+        <button id='age53btn'>	53	</button>
+        <button id='age54btn'>	54	</button>
+        <button id='age55btn'>	55	</button>
+
+
+
+        <div class='hiddenGap'></div> 
+
+        <button id='age56btn'>	56	</button>
+        <button id='age57btn'>	57	</button>
+        <button id='age58btn'>	58	</button>
+        <button id='age59btn'>	59	</button>
+        <button id='age60btn'>	60	</button>
+
+
+
+      </div>
+    </div>
+
+    <div class='hiddenSpace'></div>
+
+
+
+
+    <div class='lines'>
+      <button class='rowNumber'><span id='y7'>Y</span></button>
+      <div class='yearLine'>
+
+        <button>	2045	</button>
+        <button>	2046	</button>
+        <button>	2047	</button>
+        <button>	2048	</button>
+        <button>	2049	</button>
+
+
+        <div class='hiddenGap'></div> 
+
+        <button>	2050	</button>
+        <button>	2051	</button>
+        <button>	2052	</button>
+        <button>	2053	</button>
+        <button>	2054	</button>
+
+
+      </div>
+    </div>
+
+    <div class='lines'>
+      <button class='rowNumber'>70</button>
+      <div class='ageLine'>
+        <button id='age61btn'>	61	</button>
+        <button id='age62btn'>	62	</button>
+        <button id='age63btn'>	63	</button>
+        <button id='age64btn'>	64	</button>
+        <button id='age65btn'>	65	</button>
+
+
+        <div class='hiddenGap'></div> 
+
+        <button id='age66btn'>	66	</button>
+        <button id='age67btn'>	67	</button>
+        <button id='age68btn'>	68	</button>
+        <button id='age69btn'>	69	</button>
+        <button id='age70btn'>	70	</button>
+
+
+      </div>
+    </div>
+
+    <div class='lines'>
+      <button class='rowNumber'><span id='y8'>Y</span></button>
+      <div class='yearLine'>
+
+        <button>	2055	</button>
+        <button>	2056	</button>
+        <button>	2057	</button>
+        <button>	2058	</button>
+        <button>	2059	</button>
+
+
+        <div class='hiddenGap'></div> 
+        <button>	2060	</button>
+        <button>	2061	</button>
+        <button>	2062	</button>
+        <button>	2063	</button>
+        <button>	2064	</button>
+
+
+      </div>
+    </div>
+
+
+    <div class='lines'>
+      <button class='rowNumber'>80</button>
+      <div class='ageLine'>
+
+        <button id='age71btn'>	71	</button>
+        <button id='age72btn'>	72	</button>
+        <button id='age73btn'>	73	</button>
+        <button id='age74btn'>	74	</button>
+        <button id='age75btn'>	75	</button>
+
+
+
+        <div class='hiddenGap'></div> 
+        <button id='age76btn'>	76	</button>
+        <button id='age77btn'>	77	</button>
+        <button id='age78btn'>	78	</button>
+        <button id='age79btn'>	79	</button>
+        <button id='age80btn'>	80	</button>
+
+
+      </div>
+    </div>
+
+    <div class='hiddenSpace'></div>
+
+
+
+
+    <div class='lines'>
+      <button class='rowNumber'><span id='y9'>Y</span></button>
+      <div class='yearLine'>
+
+        <button>	2065	</button>
+        <button>	2066	</button>
+        <button>	2067	</button>
+        <button>	2068	</button>
+        <button>	2069	</button>
+
+
+        <div class='hiddenGap'></div> 
+
+        <button>	2070	</button>
+        <button>	2071	</button>
+        <button>	2072	</button>
+        <button>	2073	</button>
+        <button>	2074	</button>
+
+
+      </div>
+    </div>
+
+    <div class='lines'>
+      <button class='rowNumber'>90</button>
+      <div class='ageLine'>
+        <button id='age81btn'>	81	</button>
+        <button id='age82btn'>	82	</button>
+        <button id='age83btn'>	83	</button>
+        <button id='age84btn'>	84	</button>
+        <button id='age85btn'>	85	</button>
+
+
+        <div class='hiddenGap'></div> 
+        <button id='age86btn'>	86	</button>
+        <button id='age87btn'>	87	</button>
+        <button id='age88btn'>	88	</button>
+        <button id='age89btn'>	89	</button>
+        <button id='age90btn'>	90	</button>
+
+
+      </div>
+    </div>
+
+    <div class='lines'>
+      <button class='rowNumber'><span id='y10'>Y</span></button>
+      <div class='yearLine'>
+        <button>	2075	</button>
+        <button>	2076	</button>
+        <button>	2077	</button>
+        <button>	2078	</button>
+        <button>	2079	</button>
+
+
+        <div class='hiddenGap'></div> 
+        <button>	2080	</button>
+        <button>	2081	</button>
+        <button>	2082	</button>
+        <button>	2083	</button>
+        <button>	2084	</button>
+
+
+      </div>
+    </div>
+
+
+    <div class='lines'>
+      <button class='rowNumber'><span id='columnAge100'>100</span></button>
+      <div class='ageLine'>
+        <button id='age91btn'>	91	</button>
+        <button id='age92btn'>	92	</button>
+        <button id='age93btn'>	93	</button>
+        <button id='age94btn'>	94	</button>
+        <button id='age95btn'>	95	</button>
+
+
+
+        <div class='hiddenGap'></div> 
+        <button id='age96btn'>	96	</button>
+        <button id='age97btn'>	97	</button>
+        <button id='age98btn'>	98	</button>
+        <button id='age99btn'>	99	</button>
+        <button id='age100btn'>	100	</button>
+
+
+      </div>
+    </div>
+
+    <div class='hiddenSpace'></div>
+
+
+
+
+
+</body>
+</html>
+
+
