@@ -1,0 +1,2181 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+/* #################################################################################################### */
+/* index
+0 body
+1 weeks52
+2 age100Container
+3 hoursContainer
+4 clockAndButton
+5 flex4   */
+
+/* #################################################################################################### */
+/* 0 bigContainer
+
+1 flexBox1 style="order: 2" 
+1.1 weeks52
+1.2 flexBox1 age100Container
+
+2 hoursContainer style="order: 1"
+
+3 flex3 clockAndButton style="order: 3"
+3.1 clockContainer  
+3.1.1 clock1  
+3.1.2 clock2 
+3.1.3 clockBtn
+
+3.2 linkButtons
+
+4 flex4 myhobby style="order: 4" --> */ 
+
+/* #################################################################################################### */
+/* 0 const setting
+1 showingCurrentTime();
+2 showingCurrentWeek
+3 runClock(); */ 
+ /* #################################################################################################### */
+
+
+
+/*  !@! */
+/* #################################################################################################### */
+/* #################################################################################################### */
+/* #################################################################################################### */
+/* #################################################################################################### */
+
+/* 
+index
+0 body
+1 weeks52
+2 age100Container
+3 hoursContainer
+4 clockAndButton
+5 flex4  
+
+*/
+
+/* qwv */
+body{
+  background: #FDF5DF;
+}
+
+.bigContainer{
+display: flex; 
+background: #FDF5DF;
+}
+
+
+/* #################################################################################################### */
+/* #################################################################################################### */
+/* #################################################################################################### */
+/* #################################################################################################### */
+
+/* qwq */
+.weeks52{
+  /* background-color: red; */
+  margin: 4px;
+  margin-top: 0px;
+  /* margin-left: 5px;
+  margin-bottom: 5px; */
+}
+
+
+.weeks52 .line52week {
+  display: flex;
+
+}
+
+.weeks52 button{
+  width: 23px;
+  height: 18px;
+  padding: 0;
+  margin-right: 2px;
+  margin-bottom: 3px;  
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.weeks52 .hiddenSpace{
+  height: 2px;
+  width:  205px;
+  border-top: 2px solid orange;
+  margin-top: -2px;
+  
+}
+
+.line52week .hiddenGap{
+  margin-right: 4px;background:blue;
+}
+
+
+/* #################################################################################################### */
+/* #################################################################################################### */
+/* #################################################################################################### */
+/* #################################################################################################### */
+
+/* qww */
+.age100Container {
+  margin-left: 6px;
+  
+    /* background-color: red; */
+}
+
+.age100Container .hiddenSpaceTop{
+  margin-bottom: 5px;
+  width: 254px;
+  height: 5px;
+  /* border-top: 2px solid blue; */
+  background-color: black;
+
+}
+
+.age100Container .columnLine{
+  display: flex; 
+  margin : 0px;
+  padding-right: 0px;
+    
+}
+.age100Container .lines{display: flex; margin-top: 3px;}
+
+.age100Container .yearLine{display: flex; margin-right: 0.5em; }
+.age100Container .ageLine{display: flex; margin-right: 0.5em;  }
+
+.age100Container .hiddenSpace{height:5px;}
+.age100Container .hiddenBtn{visibility: hidden;}
+.age100Container .hiddenGap{width: 2.5px;}
+
+.age100Container .rowNumber{    
+height: 20px;  width: 20px;
+font-weight:bold;
+border-radius: 3px;
+margin-right: 0.3em; padding: 0px;
+}
+
+
+.age100Container .y100 {
+  font-size: 10px;  
+  
+}
+
+#columnAge100{
+  font-weight: bold;
+ 
+  background-color: darkorange;
+  text-align: top;
+    
+}
+
+.age100Container .yearLine button{
+height: 20px;  width: 20px;
+font-size: 8px; font-weight:bold; color: blue;
+border-radius: 3px; 
+padding: 0;  margin-right: 3px;
+}
+.age100Container .yearLine button:hover{font-size: 14px;z-index:1;color:black;}
+.age100Container .yearLine button:active{font-size: 60px;z-index:1;color:black;}
+
+
+.age100Container .ageLine button{
+height: 20px;  width: 20px;
+border-radius: 3px; 
+font-weight:bold;
+margin-right: 3px;  padding: 0px;
+background: DodgerBlue;
+}
+
+
+/* future age colored green start Can delete yearly to make button blue */
+/* future age colored green start Can delete yearly to make button blue */
+/* future age colored green start Can delete yearly to make button blue */
+#age40btn,#age41btn,#age42btn,#age43btn,#age44btn,#age45btn,#age46btn,#age47btn,#age48btn,#age49btn,#age50btn,#age51btn,#age52btn,#age53btn,#age54btn,#age55btn,#age56btn,#age57btn,#age58btn,#age59btn,#age60btn{ 
+background: green;}
+#age61btn,#age62btn,#age63btn,#age64btn,#age65btn,#age66btn,#age67btn,#age68btn,#age69btn,#age70btn,#age71btn,#age72btn,#age73btn,#age74btn,#age75btn	,#age76btn,#age77btn,#age78btn,#age79btn,#age80btn,#age81btn,#age82btn,#age83btn,#age84btn,#age85btn,#age86btn,#age87btn,#age88btn,#age89btn,#age90btn,#age91btn,#age92btn,#age93btn,#age94btn,#age95btn,#age96btn,#age97btn,#age98btn,#age99btn,#age100btn{
+background:DimGray}
+/* future age colored green end */
+/* future age colored green end */
+/* future age colored green end */
+
+
+/* special marks start*/
+#y1span {  font-size: 10px;  background: darkorange;}
+#age39btn { animation: presentYear 0.1s infinite alternate-reverse ; }
+#age45btn,#age55btn,#age65btn { background: darkorange; }
+#age75btn{ background: red;}
+#age60btn {  background: red; }
+#age100btn{ font-size: 10px; background: red; }
+/* special marks end*/
+
+@keyframes presentYear {
+from {background-color: DarkOrange;}
+to {background-color: Crimson;}
+}
+
+
+/* #################################################################################################### */
+/* #################################################################################################### */
+/* #################################################################################################### */
+/* #################################################################################################### */
+
+/* qwe */
+
+
+.hoursContainer button{
+width: 23px;
+height: 23px;
+font-size: 11px;
+font-weight: bold;
+margin-right: 1px;
+margin-bottom: 1px;
+padding: 0;
+background: white;
+}
+.hoursContainer .emptySpace{height: 5px; width:199px;
+border-top: 2px solid ;
+margin-left: 1px;}
+.hoursContainer .emptySpaceMiddle{height: 3px; width:199px;border-top: 3px solid red;margin-left: 1px;}
+
+
+.hoursContainer .week button{
+background: LightGray;
+font-size: 10px;
+font-weight: bold;
+padding: 0;
+}#Sa{background: LightBlue;}#Su{background: Tomato;}
+
+
+#Mo,#h0000,#h0100,#h0200,#h0300,#h0400,#h0500,#h0600,#h0700,#h0800,#h0900,#h1000,#h1100,#h1200,#h1300,#h1400,#h1500,#h1600,#h1700,#h1800,#h1900,#h2000,#h2100,#h2200,#h2300{
+background: LightGray;
+margin-right: 5px;
+}
+
+
+#Th,#h0030,#h0130,#h0230,#h0330,#h0430,#h0530,#h0630,#h0730,#h0830,#h0930,#h1030,#h1130,#h1230,#h1330,#h1430,#h1530,#h1630,#h1730,#h1830,#h1930,#h2030,#h2130,#h2230,#h2330{  margin-right: 5px; }
+
+
+
+@keyframes presentWeekDay {
+from {background-color: DarkOrange;}
+to {background-color: Crimson;}
+}
+
+
+    @keyframes mymove1 {
+      50%  {background-image: linear-gradient(to bottom,white 50%, blue 50%);}
+      55%  {background-image: linear-gradient(to bottom,white 55%, blue 50%);}     
+      60%   {background-image: linear-gradient(to bottom,white 60%, blue 40%);}
+      65%   {background-image: linear-gradient(to bottom,white 65%, blue 40%);}     
+      70%   {background-image: linear-gradient(to bottom,white 70%, blue 30%);}
+      75%   {background-image: linear-gradient(to bottom,white 75%, blue 30%);}
+      80%   {background-image: linear-gradient(to bottom,white 80%, blue 20%);}
+      85%   {background-image: linear-gradient(to bottom,white 85%, blue 20%);}
+      90%   {background-image: linear-gradient(to bottom,white 90%, blue 10%);}
+      95%   {background-image: linear-gradient(to bottom,white 95%, blue 10%);}
+      100% {background-image: linear-gradient(to bottom,white 100%, blue 0%);}
+    }
+
+
+    @keyframes mymove2 {      
+      50%  {background-image: linear-gradient(to top,blue 50%, white 50%);}
+      55%  {background-image: linear-gradient(to top,blue 55%, white 50%);}
+      60%   {background-image: linear-gradient(to top,blue 60%, white 40%);}
+      65%   {background-image: linear-gradient(to top,blue 65%, white 40%);}
+      70%   {background-image: linear-gradient(to top,blue 70%, white 30%);}
+      75%   {background-image: linear-gradient(to top,blue 75%, white 30%);}        
+      80%   {background-image: linear-gradient(to top,blue 80%, white 20%);}
+      85%   {background-image: linear-gradient(to top,blue 85%, white 20%);}        
+      90%   {background-image: linear-gradient(to top,blue 90%, white 10%);}
+      95%   {background-image: linear-gradient(to top,blue 95%, white 10%);}
+      100% {background-image: linear-gradient(to top,blue 100%, white 0%);}
+    }
+@keyframes textBlinkerAni {
+from {color: black;}
+to {color: Crimson;}
+}
+
+
+
+/* #################################################################################################### */
+/* #################################################################################################### */
+/* #################################################################################################### */
+/* #################################################################################################### */
+
+/* qwa */
+
+.clockAndButton{
+  width: 500px;
+  height: 800px;
+  /* background: greenyellow; */
+   position: relative;
+  
+}
+.clockContainer{
+  width: 300px;
+  height: 175px;
+  display: inline-flex;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin-top: 0;
+  font-weight: bold;
+    /* background: blueviolet; */
+}
+    
+/* clock1 *//* clock1 *//* clock1 *//* clock1 *//* clock1 */
+.clockContainer > .clock1{
+  width:140px;
+  height:140px;
+  margin-left: 8px;
+  margin-top: 2px;
+  background-color: lightgray;
+  background-image: linear-gradient();
+  border: 2px solid black;
+  border-radius: 50%;
+  position: relative;
+}
+
+  /* ##clock1SpanLine working */
+.clock1SpanLine{
+  width: 80px;
+margin-left: 56px;
+margin-top: 100px;
+  /* background-color: red; */
+}
+
+.clock1Span1{
+  color:gray;
+/*   background: white; */
+}
+
+.clock1Span2{
+  background: white;
+  color:orange;
+}
+  
+  
+#clock1Center{
+  width: 8px;
+  height: 8px;
+  background-color: black;
+  position: absolute;
+  border: 1px solid black;
+  border-radius: 50%;
+  margin: auto;
+  right:0;
+  left:0;
+  bottom:0;
+  top:0;
+  z-index: 999;
+}
+#clock1Hr{
+    position: absolute;
+    width:  4.5px;
+    height: 40px;
+    background-color: black ;
+    left: 0;
+    right: 0;
+    top: 50px;
+    bottom: 0;
+    margin: auto;
+    bottom: 100px;
+transform: rotate(0deg);
+transform-origin: center 100%;
+border-radius:  50%;
+
+}
+#clock1Min{ 
+    position: absolute;
+    width:  4.5px;
+    height: 65px;
+    background-color: black ;
+    left: 0;
+    right: 0;
+    top: 33px;
+    bottom: 0;
+    margin: auto;
+    bottom: 100px;
+transform: rotate(0deg);
+transform-origin: center 100%;
+border-radius:  50%;
+}
+#clock1Sec{ 
+  position: absolute;
+    width:2px;
+    height: 65px;
+    background-color: red ;
+    left: 0;
+    right: 0;
+    top: 33px;
+    bottom: 0;
+    margin: auto;
+    bottom: 100px;
+transform: rotate(0deg);
+transform-origin: center 100%;
+}
+
+
+
+
+
+/* clock2 *//* clock2 *//* clock2 *//* clock2 *//* clock2 */
+.clockContainer > .clock2{
+  margin-left: 5px;  
+  margin-top: 2px;
+  background-image: linear-gradient(30deg, #006275, #014b66 80%, rgb(109, 176, 171));
+  width:140px;
+  height:140px;
+  background-color: blue;
+  border: 2px solid black;
+  border-radius: 50%;
+  position: relative;
+}
+
+
+
+  
+
+/* ##clock2SpanLine working */
+/* clock2SpanLine working */
+
+.clock2SpanLine{
+  width: 80px;
+margin-left: 56px;
+margin-top: 100px;
+/*   background-color: red; */
+  
+}
+
+/* clock2 AMPM */
+#clock2Span1{
+  color:dodgerblue;
+/*   background: white; */
+}
+
+/* summertime color */
+#clock2Span2{ 
+/*   background: white; */
+  color:orange;
+}
+
+  
+  
+  
+#clock2Center{
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: black;
+  position: absolute;
+  border: 1px solid black;
+  border-radius: 50%;
+  margin: auto;
+  right:0;
+  left:0;
+  bottom:0;
+  top:0;
+  z-index: 999;
+}
+#clock2Hr{
+  position: absolute;
+    width:  4.5px;
+    height: 40px;
+    background-color: black ;
+    left: 0;
+    right: 0;
+    top: 50px;
+    bottom: 0;
+    margin: auto;
+    bottom: 100px;
+transform: rotate(0deg);
+transform-origin: center 100%;
+border-radius:  50%;
+
+}
+#clock2Min{
+  position: absolute;
+    width:  4.5px;
+    height: 65px;
+    background-color: black ;
+    left: 0;
+    right: 0;
+    top: 33px;
+    bottom: 0;
+    margin: auto;
+    bottom: 100px;
+transform: rotate(0deg);
+transform-origin: center 100%;
+border-radius:  50%;
+
+}
+#clock2Sec{
+
+  position: absolute;
+    width:2px;
+    height: 65px;
+    background-color: red ;
+    left: 0;
+    right: 0;
+    top: 33px;
+    bottom: 0;
+    margin: auto;
+    bottom: 100px;
+transform: rotate(0deg);
+transform-origin: center 100%;
+
+}
+
+
+
+
+
+/* btnInline *//* btnInline *//* btnInline *//* btnInline *//* btnInline */
+.clockContainer > .clockBtn >.btnInline{
+  width: 300px;
+  position: absolute;
+  /* background-color: red; */
+  left: 2px;
+  top: 153px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  display: inline-flex;
+  
+}
+
+/* btnSection */
+.clockContainer > .clockBtn >.btnInline >.btnSection{
+/* background-color: yellow; */
+width: 200px;
+}
+.clockContainer > .clockBtn >.btnInline >.btnSection button{
+  width: 27px;
+  height: 21px;
+  padding: 2px;
+  background-color: lightgray;
+  font-size: 14px;
+  font-weight: bold;
+}
+.clockContainer > .clockBtn >.btnInline >.btnSection button:hover{
+/* hover */
+  background-color: tomato;
+}
+.clockContainer > .clockBtn >.btnInline >.btnSection button:active{
+/* active */
+padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+
+
+/* submitSection */
+.clockContainer > .clockBtn >.btnInline >.submitSection{
+  margin-left: 5px;
+  width: 85px;
+  /* background-color: blue; */
+}
+.clockBtnFormInput{
+  width: 30px;
+  height: 14px;
+  font-size: 13px;
+}
+.clockBtnFormSubmit{
+  width: 40px;
+  height: 21px;
+  background-color: lightgray;
+  font-size: 14px;
+  font-weight: bold;
+  font-size: 14px;
+  font-weight: bold;
+}
+.clockBtnFormSubmit:hover{
+  background-color: tomato;
+}
+
+.clockBtnFormSubmit:active{
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
+}
+
+
+
+
+
+.linkButtons{  
+padding: 5px;
+width: 310px;
+margin-top: 0px;
+position: absolute;
+
+}
+
+
+
+/* #################################################################################################### */
+/* #################################################################################################### */
+/* #################################################################################################### */
+/* #################################################################################################### */
+
+/* qws */
+
+.flex4{
+  margin-top: 3px;
+  /* background-color: blue; */
+  padding: 5px;
+  left:820px;
+  top:-20px;
+  position: absolute;
+}
+
+
+
+
+
+
+</style>
+</head>
+<body>
+<!--  !@@-->
+<!-- #################################################################################################### -->
+<!-- #################################################################################################### -->
+<!-- #################################################################################################### -->
+<!-- #################################################################################################### -->
+
+<!-- index
+0 bigContainer
+
+1 flexBox1 style="order: 2" 
+1.1 weeks52
+1.2 flexBox1 age100Container
+
+2 hoursContainer style="order: 1"
+
+3 flex3 clockAndButton style="order: 3"
+3.1 clockContainer  
+3.1.1 clock1  
+3.1.2 clock2 
+3.1.3 clockBtn
+
+3.2 linkButtons
+
+4 flex4 myhobby style="order: 4" -->
+
+
+<!-- #################################################################################################### -->
+<!-- #################################################################################################### -->
+<!-- #################################################################################################### -->
+<!-- #################################################################################################### -->
+
+<!-- asv -->
+
+<div class='bigContainer'>
+
+
+<!-- #################################################################################################### -->
+<!-- #################################################################################################### -->
+<!-- #################################################################################################### -->
+<!-- #################################################################################################### -->
+
+<!-- asq -->
+<div style="order: 2" class="flexBox1"> <!-- box1 contains weeks52 and age100 -->
+
+
+<!-- #################################################################################################### -->
+<!-- #################################################################################################### -->
+<!-- #################################################################################################### -->
+<!-- #################################################################################################### -->
+
+<!-- asqfq -->
+
+<div class="weeks52">    
+    <div class='flex3 weeks52'> 
+      <div class=''>
+        <div class='line52week'>
+          <button>1</button> 
+          <button>2</button> 
+          <button>3</button> 
+          <button>4</button> 
+          <button>5</button> 
+          <div class='hiddenGap'></div>
+          <button>6</button> 
+          <button>7</button> 
+          <button>8</button> 
+          <button>9</button> 
+          <button>M</button> 
+        </div><!--  w1 div end  -->
+    
+    
+        <div class='line52week'>
+          <button>11</button> 
+          <button>12</button> 
+          <button>13</button> 
+          <button>14</button> 
+          <button>15</button>
+          <div class='hiddenGap'></div>
+          <button>16</button> 
+          <button>17</button> 
+          <button>18</button> 
+          <button>19</button> 
+          <button>M</button> 
+        </div><!--  w2 div end  -->
+    
+        <div class='hiddenSpace'></div>
+    
+        <div class='line52week'>
+          <button>21</button> 
+          <button>22</button> 
+          <button>23</button> 
+          <button>24</button> 
+          <button>25</button>
+          <div class='hiddenGap'></div> 
+          <button>26</button> 
+          <button>27</button> 
+          <button>28</button> 
+          <button>29</button> 
+          <button>J</button> 
+        </div><!-- w3  div end  -->
+    
+        <div class='line52week'>
+          <button>31</button> 
+          <button>32</button> 
+          <button>33</button> 
+          <button>34</button> 
+          <button>35</button> 
+          <div class='hiddenGap'></div>
+          <button>36</button> 
+          <button>37</button> 
+          <button>38</button> 
+          <button>39</button> 
+          <button>O</button> 
+        </div><!-- w4  div end  -->
+        
+        <div class='hiddenSpace'></div>
+        
+        <div class='line52week'>
+          <button>41</button> 
+          <button>42</button> 
+          <button>43</button> 
+          <button>44</button> 
+          <button>45</button> 
+          <div class='hiddenGap'></div>
+          <button>46</button> 
+          <button>47</button> 
+          <button>48</button> 
+          <button>49</button> 
+          <button>D</button> 
+        </div><!-- w5  div end  -->
+        
+        <div class='line52week'>
+          <button>51</button> 
+          <button>52</button> 
+          <button>53</button> 
+        </div><!-- w6  div end  -->
+    
+      </div><!-- line52week div end   -->
+    
+    </div><!-- flex3 weeks52 div end  -->
+        </div>
+
+
+<!-- #################################################################################################### -->
+<!-- #################################################################################################### -->
+<!-- #################################################################################################### -->
+<!-- #################################################################################################### -->
+
+<!-- asqfw -->
+<div class='age100Container'>
+
+    <div class='hiddenSpaceTop'></div>
+  
+  <div class='columnLine'>
+  <button class='rowNumber'></button>
+  <div class='yearLine'>
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>4</button> 
+    <button>5</button>
+    <div class='hiddenGap'></div> 
+    <button>6</button> 
+    <button>7</button> 
+    <button>8</button> 
+    <button>9</button> 
+    <button>10</button>    
+  </div><!--yearLine div    -->
+  </div><!-- columnLine div -->
+  
+  <div class='lines'>
+  <button class='rowNumber'><span id='y1span'>Y84<span></button>
+    
+    <div class='yearLine'>
+      <button>	1985	</button>
+      <button>	1986	</button>
+      <button>	1987	</button>
+      <button>	1988	</button>
+      <button>	1989	</button>
+  
+      <div class='hiddenGap'></div> 
+  
+      <button>	1990	</button>
+      <button>	1991	</button>
+      <button>	1992	</button>
+      <button>	1993	</button>
+      <button>	1994	</button>
+    </div><!--yearLine div      -->
+    </div><!--lines div    -->
+  
+    <div class='lines'>
+      <button class='rowNumber'>10</button>
+      <div class='ageLine'>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button> 
+        <button>5</button>
+        <div class='hiddenGap'></div> 
+        <button>6</button> 
+        <button>7</button> 
+        <button>8</button> 
+        <button>9</button> 
+        <button>10</button>    
+      </div>
+    </div>
+  
+    <div class='lines'>
+      <button class='rowNumber'><span id='y2'>Y</span></button>
+      <div class='yearLine'>
+        <button>	1995	</button>
+        <button>	1996	</button>
+        <button>	1997	</button>
+        <button>	1998	</button>
+        <button>	1999	</button>
+  
+        <div class='hiddenGap'></div> 
+        <button>	2000	</button>
+        <button>	2001	</button>
+        <button>	2002	</button>
+        <button>	2003	</button>
+        <button>	2004	</button>
+  
+      </div>
+    </div>
+  
+  
+    <div class='lines'>
+      <button class='rowNumber'>20</button>
+      <div class='ageLine'>
+        <button>	11	</button>
+        <button>	12	</button>
+        <button>	13	</button>
+        <button>	14	</button>
+        <button>	15	</button>
+  
+        <div class='hiddenGap'></div> 
+        <button>	16	</button>
+        <button>	17	</button>
+        <button>	18	</button>
+        <button>	19	</button>
+        <button>	20	</button>
+  
+      </div>
+    </div>
+  
+    <div class='hiddenSpace'></div>
+  
+  
+    <div class='lines'>
+      <button class='rowNumber'><span id='y3'>Y</span></button>
+      <div class='yearLine'>
+        <button>	2005	</button>
+        <button>	2006	</button>
+        <button>	2007	</button>
+        <button>	2008	</button>
+        <button>	2009	</button>
+  
+  
+        <div class='hiddenGap'></div> 
+        <button>	2010	</button>
+        <button>	2011	</button>
+        <button>	2012	</button>
+        <button>	2013	</button>
+        <button>	2014	</button>
+  
+      </div>
+    </div>
+  
+    <div class='lines'>
+      <button class='rowNumber'>30</button>
+      <div class='ageLine'>
+        <button>	21	</button>
+        <button>	22	</button>
+        <button>	23	</button>
+        <button>	24	</button>
+        <button>	25	</button>
+  
+        <div class='hiddenGap'></div> 
+        <button>	26	</button>
+        <button>	27	</button>
+        <button>	28	</button>
+        <button>	29	</button>
+        <button>	30	</button>
+  
+      </div>
+    </div>
+  
+    <div class='lines'>
+      <button class='rowNumber'><span id='y4'>Y</span></button>
+      <div class='yearLine'>
+  
+        <button>	2015	</button>
+        <button>	2016	</button>
+        <button>	2017	</button>
+        <button>	2018	</button>
+        <button>	2019	</button>
+  
+  
+        <div class='hiddenGap'></div> 
+  
+        <button>	2020	</button>
+        <button>	2021	</button>
+        <button>	2022	</button>
+        <button>	2023	</button>
+        <button>	2024	</button>
+  
+      </div>
+    </div>
+  
+  
+    <div class='lines'>
+      <button class='rowNumber'>40</button>
+      <div class='ageLine'>
+        <button>	31	</button>
+        <button>	32	</button>
+        <button>	33	</button>
+        <button>	34	</button>
+        <button>	35	</button>
+  
+  
+        <div class='hiddenGap'></div> 
+        <button>	36	</button>
+        <button>	37	</button>
+        <button>	38	</button>
+        <button id='age39btn'>64</button>
+        <button id='age40btn'>
+          40	</button>
+  
+  
+      </div>
+    </div>
+  
+    <div class='hiddenSpace'></div>
+  
+  
+  
+  
+    <div class='lines'>
+      <button class='rowNumber'><span id='y5'>Y</span></button>
+      <div class='yearLine'>
+        <button>	2025	</button>
+        <button>	2026	</button>
+        <button>	2027	</button>
+        <button>	2028	</button>
+        <button>	2029	</button>
+  
+  
+        <div class='hiddenGap'></div> 
+  
+        <button>	2030	</button>
+        <button>	2031	</button>
+        <button>	2032	</button>
+        <button>	2033	</button>
+        <button>	2034	</button>
+  
+  
+      </div>
+    </div>
+  
+    <div class='lines'>
+      <button class='rowNumber'>50</button>
+      <div class='ageLine'>
+  
+        <button id='age41btn'>	41	</button>
+        <button id='age42btn'>	42	</button>
+        <button id='age43btn'>	43	</button>
+        <button id='age44btn'>	44	</button>
+        <button id='age45btn'>	45	</button>
+  
+  
+        <div class='hiddenGap'></div> 
+        <button id='age46btn'>	46	</button>
+        <button id='age47btn'>	47	</button>
+        <button id='age48btn'>	48	</button>
+        <button id='age49btn'>	49	</button>
+        <button id='age50btn'>	50	</button>
+  
+  
+      </div>
+    </div>
+  
+    <div class='lines'>
+      <button class='rowNumber'><span id='y6'>Y</span></button>
+      <div class='yearLine'>
+  
+        <button>	2035	</button>
+        <button>	2036	</button>
+        <button>	2037	</button>
+        <button>	2038	</button>
+        <button>	2039	</button>
+  
+  
+        <div class='hiddenGap'></div> 
+  
+        <button>	2040	</button>
+        <button>	2041	</button>
+        <button>	2042	</button>
+        <button>	2043	</button>
+        <button>	2044	</button>
+  
+  
+      </div>
+    </div>
+  
+  
+    <div class='lines'>
+      <button class='rowNumber'>60</button>
+      <div class='ageLine'>
+  
+        <button id='age51btn'>	51	</button>
+        <button id='age52btn'>	52	</button>
+        <button id='age53btn'>	53	</button>
+        <button id='age54btn'>	54	</button>
+        <button id='age55btn'>	55	</button>
+  
+  
+  
+        <div class='hiddenGap'></div> 
+  
+        <button id='age56btn'>	56	</button>
+        <button id='age57btn'>	57	</button>
+        <button id='age58btn'>	58	</button>
+        <button id='age59btn'>	59	</button>
+        <button id='age60btn'>	60	</button>
+  
+  
+  
+      </div>
+    </div>
+  
+    <div class='hiddenSpace'></div>
+  
+  
+  
+  
+    <div class='lines'>
+      <button class='rowNumber'><span id='y7'>Y</span></button>
+      <div class='yearLine'>
+  
+        <button>	2045	</button>
+        <button>	2046	</button>
+        <button>	2047	</button>
+        <button>	2048	</button>
+        <button>	2049	</button>
+  
+  
+        <div class='hiddenGap'></div> 
+  
+        <button>	2050	</button>
+        <button>	2051	</button>
+        <button>	2052	</button>
+        <button>	2053	</button>
+        <button>	2054	</button>
+  
+  
+      </div>
+    </div>
+  
+    <div class='lines'>
+      <button class='rowNumber'>70</button>
+      <div class='ageLine'>
+        <button id='age61btn'>	61	</button>
+        <button id='age62btn'>	62	</button>
+        <button id='age63btn'>	63	</button>
+        <button id='age64btn'>	64	</button>
+        <button id='age65btn'>	65	</button>
+  
+  
+        <div class='hiddenGap'></div> 
+  
+        <button id='age66btn'>	66	</button>
+        <button id='age67btn'>	67	</button>
+        <button id='age68btn'>	68	</button>
+        <button id='age69btn'>	69	</button>
+        <button id='age70btn'>	70	</button>
+  
+  
+      </div>
+    </div>
+  
+    <div class='lines'>
+      <button class='rowNumber'><span id='y8'>Y</span></button>
+      <div class='yearLine'>
+  
+        <button>	2055	</button>
+        <button>	2056	</button>
+        <button>	2057	</button>
+        <button>	2058	</button>
+        <button>	2059	</button>
+  
+  
+        <div class='hiddenGap'></div> 
+        <button>	2060	</button>
+        <button>	2061	</button>
+        <button>	2062	</button>
+        <button>	2063	</button>
+        <button>	2064	</button>
+  
+  
+      </div>
+    </div>
+  
+  
+    <div class='lines'>
+      <button class='rowNumber'>80</button>
+      <div class='ageLine'>
+  
+        <button id='age71btn'>	71	</button>
+        <button id='age72btn'>	72	</button>
+        <button id='age73btn'>	73	</button>
+        <button id='age74btn'>	74	</button>
+        <button id='age75btn'>	75	</button>
+  
+  
+  
+        <div class='hiddenGap'></div> 
+        <button id='age76btn'>	76	</button>
+        <button id='age77btn'>	77	</button>
+        <button id='age78btn'>	78	</button>
+        <button id='age79btn'>	79	</button>
+        <button id='age80btn'>	80	</button>
+  
+  
+      </div>
+    </div>
+  
+    <div class='hiddenSpace'></div>
+  
+  
+  
+  
+    <div class='lines'>
+      <button class='rowNumber'><span id='y9'>Y</span></button>
+      <div class='yearLine'>
+  
+        <button>	2065	</button>
+        <button>	2066	</button>
+        <button>	2067	</button>
+        <button>	2068	</button>
+        <button>	2069	</button>
+  
+  
+        <div class='hiddenGap'></div> 
+  
+        <button>	2070	</button>
+        <button>	2071	</button>
+        <button>	2072	</button>
+        <button>	2073	</button>
+        <button>	2074	</button>
+      </div>
+    </div>
+  
+    <div class='lines'>
+      <button class='rowNumber'>90</button>
+      <div class='ageLine'>
+        <button id='age81btn'>	81	</button>
+        <button id='age82btn'>	82	</button>
+        <button id='age83btn'>	83	</button>
+        <button id='age84btn'>	84	</button>
+        <button id='age85btn'>	85	</button>
+  
+        <div class='hiddenGap'></div> 
+        <button id='age86btn'>	86	</button>
+        <button id='age87btn'>	87	</button>
+        <button id='age88btn'>	88	</button>
+        <button id='age89btn'>	89	</button>
+        <button id='age90btn'>	90	</button>
+      </div>
+    </div>
+  
+    <div class='lines'>
+      <button class='rowNumber'><span id='y10'>Y</span></button>
+      <div class='yearLine'>
+        <button>	2075	</button>
+        <button>	2076	</button>
+        <button>	2077	</button>
+        <button>	2078	</button>
+        <button>	2079	</button>
+  
+        <div class='hiddenGap'></div> 
+        <button>	2080	</button>
+        <button>	2081	</button>
+        <button>	2082	</button>
+        <button>	2083	</button>
+        <button>	2084	</button>
+      </div>
+    </div>
+  
+  
+    <div class='lines'>
+      <button class='rowNumber y100'><span id='columnAge100'>100</span></button>
+      
+      <div class='ageLine'>
+        <button id='age91btn'>	91	</button>
+        <button id='age92btn'>	92	</button>
+        <button id='age93btn'>	93	</button>
+        <button id='age94btn'>	94	</button>
+        <button id='age95btn'>	95	</button>
+  
+        <div class='hiddenGap'></div> 
+        
+        <button id='age96btn'>	96	</button>
+        <button id='age97btn'>	97	</button>
+        <button id='age98btn'>	98	</button>
+        <button id='age99btn'>	99	</button>
+        <button id='age100btn'>	100	</button>
+      </div><!--ageLine div     -->
+    </div><!--lines  -->        
+    </div><!--  age100Container div -->
+  <!-- age100Container end   -->
+
+
+</div><!-- flexBox1 div end -->
+
+<!-- #################################################################################################### -->
+<!-- #################################################################################################### -->
+<!-- #################################################################################################### -->
+<!-- #################################################################################################### -->
+
+<!-- asw -->
+
+
+<div style="order: 1" class='hoursContainer'>
+  
+
+    <div class='week'>
+    <button id='Mo'>Mo</button>
+    <button id='Tu'>Tu</button>
+    <button id='We'>We</button>
+    <button id='Th'>Th</button>
+    <button id='Fr'>Fr</button>
+    <button id='Sa'>Sa</button>
+    <button id='Su'>Su</button>
+    </div>
+    
+    <div class='emptySpace'> </div>
+    
+    <div class='h0'>
+    <button id='h0000'>00</button>
+    <button id='h0010'>10</button>
+    <button id='h0020'>20</button>
+    <button id='h0030'>30</button>
+    <button id='h0040'>40</button>
+    <button id='h0050'>50</button>
+    <button id='h0060'>60</button>
+    </div>
+    
+    <div class='h1'>
+    <button id='h0100'>01</button>
+    <button id='h0110'>10</button>
+    <button id='h0120'>20</button>
+    <button id='h0130'>30</button>
+    <button id='h0140'>40</button>
+    <button id='h0150'>50</button>
+    <button id='h0160'>60</button>
+    </div>
+    
+    <div class='h2'>
+    <button id='h0200'>02</button>
+    <button id='h0210'>10</button>
+    <button id='h0220'>20</button>
+    <button id='h0230'>30</button>
+    <button id='h0240'>40</button>
+    <button id='h0250'>50</button>
+    <button id='h0260'>60</button>
+    </div>
+    
+    <div class='emptySpace'> </div>
+    
+    <div class='h3'>
+    <button id='h0300'>03</button>
+    <button id='h0310'>10</button>
+    <button id='h0320'>20</button>
+    <button id='h0330'>30</button>
+    <button id='h0340'>40</button>
+    <button id='h0350'>50</button>
+    <button id='h0360'>60</button>
+    
+    </div>
+    
+    
+    <div class='h4'>
+    <button id='h0400'>04</button>
+    <button id='h0410'>10</button>
+    <button id='h0420'>20</button>
+    <button id='h0430'>30</button>
+    <button id='h0440'>40</button>
+    <button id='h0450'>50</button>
+    <button id='h0460'>60</button>
+    </div>
+    
+    
+    <div class='emptySpace'> </div>
+    
+    
+    <div class='h5'>
+    <button id='h0500'>05</button>
+    <button id='h0510'>10</button>
+    <button id='h0520'>20</button>
+    <button id='h0530'>30</button>
+    <button id='h0540'>40</button>
+    <button id='h0550'>50</button>
+    <button id='h0560'>60</button>
+    </div>
+    
+    <div class='h6'>
+    <button id='h0600'>06</button>
+    <button id='h0610'>10</button>
+    <button id='h0620'>20</button>
+    <button id='h0630'>30</button>
+    <button id='h0640'>40</button>
+    <button id='h0650'>50</button>
+    <button id='h0660'>60</button>
+    </div>
+    
+    <div class='h7'>
+    <button id='h0700'>07</button>
+    <button id='h0710'>10</button>
+    <button id='h0720'>20</button>
+    <button id='h0730'>30</button>
+    <button id='h0740'>40</button>
+    <button id='h0750'>50</button>
+    <button id='h0760'>60</button>
+    </div>
+    
+    <div class='h8'>
+    <button id='h0800'>08</button>
+    <button id='h0810'>10</button>
+    <button id='h0820'>20</button>
+    <button id='h0830'>30</button>
+    <button id='h0840'>40</button>
+    <button id='h0850'>50</button>
+    <button id='h0860'>60</button>
+    </div>
+    
+    <div class='emptySpace'> </div>
+    
+    <div class='h9'>
+    <button id='h0900'>09</button>
+    <button id='h0910'>10</button>
+    <button id='h0920'>20</button>
+    <button id='h0930'>30</button>
+    <button id='h0940'>40</button>
+    <button id='h0950'>50</button>
+    <button id='h0960'>60</button>
+    </div>
+    
+    <div class='h10'>
+    <button id='h1000'>10</button>
+    <button id='h1010'>10</button>
+    <button id='h1020'>20</button>
+    <button id='h1030'>30</button>
+    <button id='h1040'>40</button>
+    <button id='h1050'>50</button>
+    <button id='h1060'>60</button>
+    </div>
+    
+    <div class='h11'>
+    <button id='h1100'>11</button>
+    <button id='h1110'>10</button>
+    <button id='h1120'>20</button>
+    <button id='h1130'>30</button>
+    <button id='h1140'>40</button>
+    <button id='h1150'>50</button>
+    <button id='h1160'>60</button>
+    </div>    
+    
+    <div class='h12'>
+    <button id='h1200'>12</button>
+    <button id='h1210'>10</button>
+    <button id='h1220'>20</button>
+    <button id='h1230'>30</button>
+    <button id='h1240'>40</button>
+    <button id='h1250'>50</button>
+    <button id='h1260'>60</button>
+    </div>
+    
+    
+    <div class='emptySpaceMiddle'> </div>
+    
+    <div class='h13'>
+    <button id='h1300'>13</button>
+    <button id='h1310'>10</button>
+    <button id='h1320'>20</button>
+    <button id='h1330'>30</button>
+    <button id='h1340'>40</button>
+    <button id='h1350'>50</button>
+    <button id='h1360'>60</button>
+    </div>    
+    
+    <div class='h14'>
+    <button id='h1400'>14</button>
+    <button id='h1410'>10</button>
+    <button id='h1420'>20</button>
+    <button id='h1430'>30</button>
+    <button id='h1440'>40</button>
+    <button id='h1450'>50</button>
+    <button id='h1460'>60</button>
+    </div>   
+    
+    <div class='h15'>
+    <button id='h1500'>15</button>
+    <button id='h1510'>10</button>
+    <button id='h1520'>20</button>
+    <button id='h1530'>30</button>
+    <button id='h1540'>40</button>
+    <button id='h1550'>50</button>
+    <button id='h1560'>60</button>
+    </div>        
+    
+    <div class='h16'>
+    <button id='h1600'>16</button>
+    <button id='h1610'>10</button>
+    <button id='h1620'>20</button>
+    <button id='h1630'>30</button>
+    <button id='h1640'>40</button>
+    <button id='h1650'>50</button>
+    <button id='h1660'>60</button>
+    </div>            
+    
+    <div class='emptySpace'> </div>
+    
+    <div class='h17'>
+    <button id='h1700'>17</button>
+    <button id='h1710'>10</button>
+    <button id='h1720'>20</button>
+    <button id='h1730'>30</button>
+    <button id='h1740'>40</button>
+    <button id='h1750'>50</button>
+    <button id='h1760'>60</button>
+    </div>          
+    <div class='h18'>
+    <button id='h1800'>18</button>
+    <button id='h1810'>10</button>
+    <button id='h1820'>20</button>
+    <button id='h1830'>30</button>
+    <button id='h1840'>40</button>
+    <button id='h1850'>50</button>
+    <button id='h1860'>60</button>
+    </div>
+    
+    <div class='h19'>
+    <button id='h1900'>19</button>
+    <button id='h1910'>10</button>
+    <button id='h1920'>20</button>
+    <button id='h1930'>30</button>
+    <button id='h1940'>40</button>
+    <button id='h1950'>50</button>
+    <button id='h1960'>60</button>
+    </div>                
+    <div class='h20'>
+    <button id='h1900'>20</button>
+    <button id='h2010'>10</button>
+    <button id='h2020'>20</button>
+    <button id='h2030'>30</button>
+    <button id='h2040'>40</button>
+    <button id='h2050'>50</button>
+    <button id='h2060'>60</button>
+    </div>         
+    
+    <div class='emptySpace'> </div>
+    
+    
+    <div class='h21'>
+    <button id='h2100'>21</button>
+    <button id='h2110'>10</button>
+    <button id='h2120'>20</button>
+    <button id='h2130'>30</button>
+    <button id='h2140'>40</button>
+    <button id='h2150'>50</button>
+    <button id='h2160'>60</button>
+    </div>                         
+    <div class='h22'>
+    <button id='h2200'>22</button>
+    <button id='h2210'>10</button>
+    <button id='h2220'>20</button>
+    <button id='h2230'>30</button>
+    <button id='h2240'>40</button>
+    <button id='h2250'>50</button>
+    <button id='h2260'>60</button>
+    </div>                               
+    <div class='h23'>
+    <button id='h2300'>23</button>
+    <button id='h2310'>10</button>
+    <button id='h2320'>20</button>
+    <button id='h2330'>30</button>
+    <button id='h2340'>40</button>
+    <button id='h2350'>50</button>
+    <button id='h2360'>60</button>
+    </div>    
+    
+      </div><!--    hoursContainer div-->
+      
+
+<!-- #################################################################################################### -->
+<!-- #################################################################################################### -->
+<!-- #################################################################################################### -->
+<!-- #################################################################################################### -->
+
+<!-- ase -->
+
+<div style="order: 3" class='flex3 clockAndButton'> 
+
+
+
+<!-- #################################################################################################### -->
+<!-- #################################################################################################### -->
+<!-- #################################################################################################### -->
+<!-- #################################################################################################### -->
+
+
+<!-- asefq -->
+
+<div class="clockContainer"><!-- clockContainer div start     parent flex3 linkButtons-->
+ 
+
+<!-- #################################################################################################### -->
+<!-- #################################################################################################### -->
+<!-- #################################################################################################### -->
+<!-- #################################################################################################### -->
+
+<!-- asefqfq -->
+
+<div class='clock1'><!-- clock1 div start 0000000000000 -->
+    
+    <div class="clock1SpanLine">
+      <span id="clock1Span1">AM</span>
+      <span id="clock1Span2"></span>
+      <div id="clock1Span3">AAA</div>
+    </div>
+
+    <div id="clock1Center"></div>
+    <div id="clock1Hr"></div>
+    <div id="clock1Min"></div>
+    <div id="clock1Sec"></div>
+  </div><!--clock1 div end 1111111111111111111    -->
+  
+
+<!-- #################################################################################################### -->
+<!-- #################################################################################################### -->
+<!-- #################################################################################################### -->
+<!-- #################################################################################################### -->
+
+<!-- asefqfw -->
+
+  
+<div class='clock2'> <!-- clock2 div start 0000000000000 -->
+    <div class="clock2SpanLine">
+      <span id="clock2Span1">AM</span>
+      <span id="clock2Span2">s</span>
+      <div id="clock2Span3">AAA</div>
+    </div>
+  
+    <div id="clock2Center"></div>
+    <div id="clock2Hr"></div>
+    <div id="clock2Min"></div>
+    <div id="clock2Sec"></div>
+  </div><!--clock2 div end  11111111111111  -->
+
+
+<!-- #################################################################################################### -->
+<!-- #################################################################################################### -->
+<!-- #################################################################################################### -->
+<!-- #################################################################################################### -->
+
+<!-- asefqfe -->
+
+<div class="clockBtn">
+    <div class="btnInline">
+      <div class="btnSection">
+        <button class="15">5</button>
+        <button class="15">10</button>
+    <button class="15">15</button>
+    <button class="30">30</button>
+    <button class="45">45</button>
+    <button class="30">60</button>
+    </div>
+
+    <div class="submitSection">
+    <form class="clockBtnForm"action="">
+      <input class="clockBtnFormInput" type="text">
+      <button class="clockBtnFormSubmit" >GO!</button>
+      <!-- <input class="clockBtnFormSubmit"type="submit" value="Go !" > -->
+    </form>
+    </div>
+</div><!-- btnInline div end -->
+</div><!-- clockBtn div end -->
+
+
+</div> <!-- clockContainer div end       parent flex3 linkButtons-->
+
+
+
+<!-- #################################################################################################### -->
+<!-- #################################################################################################### -->
+<!-- #################################################################################################### -->
+<!-- #################################################################################################### -->
+
+<!-- asefw -->
+
+<div class = ' linkButtons'><!-- flex3 linkButtons div start     parent flex3 -->
+
+    <h2>Button as a Links</h2>
+    <p>Click the button to go to the HTML tutorial.</p>
+    <p>BBang BBang BBang BBang BBang SSAL!!!</p>
+    
+    <button onclick="window.open('https://github.com/eduau1?tab=repositories', '_blank');">
+    eduau
+    </button>
+    <button style="font-size: 25px" onclick="window.open('https://github.com/myhobby1?tab=repositories', '_blank');">
+    myhobby
+    </button>
+    <button style="height: 50px;width:130px;font-size: 25px;
+    "onclick="window.open('https://codepen.io/pen/', '_blank');">
+    cod
+    </button>
+    
+    
+    
+    <br><br>
+    <button onclick= "window.open('https://www.speedtyper.dev/', '_blank');">
+    speedty
+    </button>
+    <button onclick=  "window.open('https://vimsnake.com/', '_blank');">
+    snake
+    </button>
+    <button onclick="window.open('https://vim-adventures.com/', '_blank');">
+    vim-adven
+    </button>
+    <br><br>
+    
+    <button style="font-size: 10px;
+    "onclick="window.open('https://www.w3schools.com/html/default.asp', '_blank');">
+    w3html</button>
+    <button style="font-size: 10px;"
+    onclick="window.open('https://www.w3schools.com/css/default.asp', '_blank');">
+    w3css
+    </button>
+    <button style="font-size: 10px;
+    "onclick="window.open('https://www.w3schools.com/js/default.asp', '_blank');">
+    w3js
+    </button>
+    <br><br>
+    
+    <button onclick="window.open('https://www.youtube.com/watch?v=BGybHqCJokU', '_blank');">
+    brianTracy
+    </button>
+    <button style="font-size: 10px;" onclick="window.open('https://opentutorials.org/module/1892', '_blank');">
+    1892
+    </button>
+    <button style="font-size: 10px;" onclick="window.open('https://opentutorials.org/course/3084', '_blank');">
+    3084
+    </button>
+    <button onclick="window.open('https:/al_solSonSuBom0914/blob/main/00_example.png', '_blank');">
+    x
+    </button>
+    <button onclick="window.open('https://github.com/eduau1/01_htmlPractice/blob/main/html_%2000_%200913.png', '_blank');">
+    tiger
+    </button>
+    
+    <br>
+    <br>
+    <button style="font-size: 20px" onclick="window.open('https://github.com/eduau1/01_htmlPractice/blob/main/html_%2000_%200913.png', '_blank');">
+      T
+      </button>
+      <button style="font-size: 25px" onclick="window.open('https://danawa.com/pc/', '_blank');">
+        PC
+        </button>
+        <button style="font-size: 25px" onclick="window.open('https://www.youtube.com/playlist?list=PLGPF8gvWLYyrmWBOzypMlVgWKfqTzYvgQ', '_blank');">
+          V1
+          </button>
+          <button style="font-size: 25px" onclick="window.open('https://www.youtube.com/playlist?list=PLfXO7j_Cgtld0Vqf1EVsgpE58JbqnDs33', '_blank');">
+           V2
+            </button>
+            <button style="font-size: 20px" onclick="window.open('https://github.com/eduau1/01_htmlPractice/blob/main/html_%2000_%200913.png', '_blank');">
+              T
+              </button>
+
+    <br>
+    <br>
+
+
+    <button style="font-size: 20px" onclick="window.open('http://playbot.spaceii.com/playbot.htm', '_blank');">
+      P0
+       </button>
+      <button onclick="window.open('https://playbot.at/', '_blank');"> 
+        P1
+              </button>
+              <button onclick="window.open('https://www.youtube.com/@user-xk3zw9zn9m/videos', '_blank');">     
+                P2
+                </button>
+                <button onclick="window.open('http://playbot.spaceii.com/portal/use_world.php', '_blank');">
+                  P3
+      </button>
+      <button onclick="window.open('http://playbot.spaceii.com/tetris/', '_blank');">
+        P4
+</button>
+<button style="font-size: 20px" onclick="window.open('https://www.google.com/search?q=%ED%94%8C%EB%A0%88%EC%9D%B4%EB%B4%87&sca_esv=579673275&source=hp&ei=MB1IZYa0NuDm2roP9dC9yAg&iflsig=AO6bgOgAAAAAZUgrQPh0ZRifwDP6dZ1RNgFBxBRSJ6q0&ved=0ahUKEwiGjK37-a2CAxVgs1YBHXVoD4kQ4dUDCAo&uact=5&oq=%ED%94%8C%EB%A0%88%EC%9D%B4%EB%B4%87&gs_lp=Egdnd3Mtd2l6IgztlIzroIjsnbTrtIcyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQLhiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAuGIAESP4MUABYkwxwA3gAkAECmAHTAaABnwyqAQUwLjguMbgBA8gBAPgBAagCAMICCxAuGIAEGMcBGNEDwgILEC4YgAQYxwEYrwHCAgcQABiABBgK&sclient=gws-wiz', '_blank');">
+  P5
+</button>
+
+
+          <br>
+          <br>
+
+
+          <button style="font-size: 20px" onclick="window.open('https://www.youtube.com/watch?v=o5yBl59wRbY', '_blank');">
+            N0
+            </button>
+
+    <button style="font-size: 15px" onclick="window.open('https://www.youtube.com/playlist?list=PLvOWFWixwOdDWDDWe4MhPgfslPIfkJgHv', '_blank');">
+      N1
+      </button>
+      <button style="font-size: 15px" onclick="window.open('https://www.youtube.com/playlist?list=PLuHgQVnccGMA52uRBmSwqcvtI5IMoFclJ', '_blank');">
+                N2
+        </button>
+        <button style="font-size: 15px" onclick="window.open('https://www.youtube.com/playlist?list=PL30o9a_lTg-IZtaUCs25URrUxDkWMUNww', '_blank');">
+            N3
+          </button>
+          <button style="font-size: 15px" onclick="window.open('https://www.youtube.com/playlist?list=PL0d8NnikouEWcF1jJueLdjRIC4HsUlULi', '_blank');">
+            N4
+            </button>
+            <button style="font-size: 15px" onclick="window.open('https://www.youtube.com/playlist?list=PL0d8NnikouEUYlR5BcG-YLbGvA5askt67', '_blank');">
+              N5
+              </button>
+              <button style="font-size: 15px" onclick="window.open('https://www.youtube.com/playlist?list=PLcXyemr8ZeoSGlzhlw4gmpNGicIL4kMcX', '_blank');">
+                N6
+                </button>
+                <button style="font-size: 15px" onclick="window.open('https://www.youtube.com/playlist?list=PLXvgR_grOs1BFH-TuqFsfHqbh-gpMbFoy', '_blank');">
+                  N7
+                  </button>
+    <br>
+    <br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    my habby is code<br>
+    <button>sports</button>
+    <br><br>
+    <img src="https://www.w3schools.com/html/programming.gif" alt="Flowers in Chania" width="100" height="100">
+    <br>
+    ##########################    
+    </div><!--    flex3 linkButtons div end -->
+
+
+<!-- #################################################################################################### -->
+<!-- #################################################################################################### -->
+<!-- #################################################################################################### -->
+<!-- #################################################################################################### -->
+
+<!-- asa -->
+
+</div><!--      felx3 div end-->
+
+
+<div style="order: 4"class='flex4 myhobby'>
+  <h1>myhobby</h1>
+<h2>everyday rutin</h2>
+<h3>to do today</h3>
+<p>to exercise everyday</p>
+<p>to read books everyday</p>
+<p>to eat snacks everytime</p>
+<p>to play game anytime</p>
+<p>나의취미는운동하고<br>책읽고 맛있는것먹고<br>게임하면서노는것<br>그리고
+<br>시간나면친구와전화하면서<br>수다떠는것이다.</p>
+################################
+<h1>myhealth</h1>
+<h2>to healthy</h2>
+<h3>for my health</h3>
+<p>go out for a walk</p>
+<p>push up everyday</p>
+<p>run to the park</p>
+<p>나는 나의 건강을 위하여<br>매일산책을하고<br>팔굽혀펴기를하고<br>
+공원에서 달리기를한다.<br>이러한것들을<br>매일하려고<br>노력하고있다.
+
+</div><!--      flex4 myhobby div end-->
+
+
+</div> <!--  bigContainer div stays up up up up --> 
+
+</div><!-- flex3 clockAndButton div end -->
+
+
+
+
+
+
+
+
+
+
+
+<script>
+// !@#
+// ####################################################################################################
+// ####################################################################################################
+// ####################################################################################################
+// ####################################################################################################
+
+// 0 const setting
+// 1 showingCurrentTime();
+// 2 showingCurrentWeek
+// 3 runClock();
+
+
+// ####################################################################################################
+// ####################################################################################################
+// ####################################################################################################
+// ####################################################################################################
+
+// zxv
+//
+// ##modify time1 hour difference
+const setTimeDifference1 = +16; 
+
+// ##modify time2 hour difference
+const setTimeDifference2 = +18;
+
+
+// ####################################################################################################
+// ####################################################################################################
+// ####################################################################################################
+// ####################################################################################################
+
+// zxq
+showingCurrentTime();
+setInterval(showingCurrentTime, 60000);
+
+
+function showingCurrentTime(){
+// setTimeandDate
+let d = new Date();
+let dd = d.getDay();
+
+let h = new Date().getHours() + setTimeDifference2; // ##modify setTimeDifference2 time hour difference at the beginning
+let hh = 0;
+if (h >= 24){ hh = h - 24; dd = dd+1} else{ hh = h; dd = dd};
+if (dd >= 7){ dd = dd - 7} else{ dd = dd }
+
+
+// ####resetAll start 2222222222222222222222222222222222222222222222222222222222
+
+// reset checkDay Animation 2.1 reset reset reset 
+for( i = 0 ; i < 7; i ++) {
+document.getElementsByClassName('week')[0].getElementsByTagName('button')[i].style.animation  = "";
+} 
+
+// reset checkHour and checkMinute Animation 2.2 reset reset reset 
+for( i = 0; i<24; i++ ){
+document.getElementsByClassName('h'+ i)[0].getElementsByTagName('button')[0].style.background = 'LightGray';
+document.getElementsByClassName('h'+ i)[0].getElementsByTagName('button')[0].style.color = 'black';
+document.getElementsByClassName('h'+ i)[0].getElementsByTagName('button')[0].style.animation = "";
+  for( r= 1; r<7; r++)  {
+    document.getElementsByClassName('h'+i)[0].getElementsByTagName('button')[r].style.background = "white"; 
+    document.getElementsByClassName('h'+i)[0].getElementsByTagName('button')[r].style.animation = "";
+    document.getElementsByClassName('h'+i)[0].getElementsByTagName('button')[r].style.animation = "";
+  }   
+};
+
+
+
+// ####main check function start 33333333333333333333333333333333333333333333333333333333333
+// checkDayBox
+var dv = document.getElementsByClassName('week')[0];
+switch (dd) {
+case 0: //sun
+  dv.childNodes[13].style.animation = "presentWeekDay 0.1s infinite alternate-reverse" ; 
+  break;
+case 1://mon
+  dv.childNodes[1].style.animation = "presentWeekDay 0.1s infinite alternate-reverse" ;
+  break;
+case 2://tue
+  dv.childNodes[3].style.animation = "presentWeekDay 0.1s infinite alternate-reverse" ; 
+  break;
+case 3://wed
+  dv.childNodes[5].style.animation = "presentWeekDay 0.1s infinite alternate-reverse" ; 
+  break;
+case 4://thu
+  dv.childNodes[7].style.animation = "presentWeekDay 0.1s infinite alternate-reverse" ; 
+  break;
+case 5://fri
+  dv.childNodes[9].style.animation = "presentWeekDay 0.1s infinite alternate-reverse" ; 
+  break;
+case 6://sa
+  dv.childNodes[11].style.animation = "presentWeekDay 0.1s infinite alternate-reverse" ; 
+  break;
+};
+
+
+// checkHourBox
+for( i = 0; i<hh; i++ )
+{
+    document.getElementsByClassName('h'+ i )[0].getElementsByTagName('button')[0].style.background = 'black';
+    document.getElementsByClassName('h'+ i)[0].getElementsByTagName('button')[0].style.color = 'darkorange';
+          
+    for( r= 1; r<7; r++)
+    {
+    document.getElementsByClassName('h'+i)[0].getElementsByTagName('button')[r].style.background = "DodgerBlue"; 
+    }   
+};
+document.getElementsByClassName('h'+(i))[0].getElementsByTagName('button')[0].style.animation = " textBlinkerAni 0.1s infinite alternate-reverse";
+document.getElementsByClassName('h'+(i))[0].getElementsByTagName('button')[0].style.background = 'black';
+
+
+// checkMinuteBox
+let mm = new Date().getMinutes();
+const a = Math.floor(mm/10);
+const b = mm%10;
+
+  for( i = 1 ; i <= a; i++)
+    {
+    document.getElementsByClassName('h'+ hh)[0].getElementsByTagName('button')[i].style.background = "DodgerBlue";
+    }
+  if( b < 5) 
+    {    
+    document.getElementsByClassName('h'+ hh)[0].getElementsByTagName('button')[a+1].style.animation = "mymove1 1s infinite reverse";
+    } else if ( b >= 5)
+      {     
+      document.getElementsByClassName('h'+ hh)[0].getElementsByTagName('button')[a+1].style.backgroundImage = "linear-gradient(to top,blue 50%, white 50%)";
+      document.getElementsByClassName('h'+ hh)[0].getElementsByTagName('button')[a+1].style.animation = "mymove2 1s infinite, textBlinkerAni 0.1s infinite alternate-reverse";
+      }
+}
+
+ 
+
+// ####################################################################################################
+// ####################################################################################################
+// ####################################################################################################
+// ####################################################################################################
+
+// zxw
+
+showingCurrentWeek();
+setInterval(showingCurrentWeek, 600000);
+
+function showingCurrentWeek(){
+  
+// // get second week
+// let firstDate = new Date(new Date().getYear() + 1900, 0, 1);
+// let firstDay = firstDate.getDay();
+// let firstWeek = 0;
+// let secondWeekStart = 0;
+
+// switch(firstDay) {
+//   case 0: secondWeekStart = 9; firstWeek = 0; break;
+//   case 1: secondWeekStart = 8; firstWeek = 1; break;
+//   case 2: secondWeekStart = 7; firstWeek = 1; break;
+//   case 3: secondWeekStart = 6; firstWeek = 1; break;
+//   case 4: secondWeekStart = 5; firstWeek = 1; break;
+//   case 5: secondWeekStart = 11; firstWeek = 0; break;
+//   case 6: secondWeekStart = 10; firstWeek = 0; break;
+// }
+// week2 = new Date(new Date().getYear() + 1900, new Date().getMonth() - new Date().getMonth(), secondWeekStart  );
+
+// // calculate what week is this week
+// let whatWeek = 0;
+
+// if ( new Date() < week2 )
+// {
+//   if ( 0 == firstDay || firstDay >= 5)
+//   {
+//         whatWeek = 5253;
+//   }  else
+//       {
+//         whatWeek = 1;
+//       }        
+// } 
+// else
+// {
+//   for( i = 2 ; i <=53 ; i++)
+//   {
+//     weekCalcul = new Date(new Date().getYear() + 1900, new Date().getMonth() - new Date().getMonth(), secondWeekStart + ( i * 7 ) );
+//     if ( new Date( new Date().getYear() + 1900, new Date().getMonth(), new Date().getDate() + 5 )   < weekCalcul)
+//     {
+//       whatWeek = i + 1;
+//       break;
+//     }
+
+//   }
+
+// }
+  currentDate = new Date();
+  startDate = new Date(currentDate.getFullYear(), 0, 1);
+  let days = Math.floor((currentDate - startDate) /
+      (24 * 60 * 60 * 1000)); 
+  let weekNumber = Math.ceil(days / 7);
+ 
+  //reset for start
+  document.getElementsByClassName('flex3 weeks52')[0].getElementsByTagName('button')[weekNumber-1].style.animation = "";
+  document.getElementsByClassName('flex3 weeks52')[0].getElementsByTagName('button')[weekNumber-2].style.animation = "";
+  // color past week pink
+  for( i = 0 ; i < weekNumber ; i++){ 
+  document.getElementsByClassName('flex3 weeks52')[0].getElementsByTagName('button')[i].style.background = 'pink';
+  }  
+  //color future week DarkSeaGreen
+  for( i = weekNumber  ; i < 53 ; i++){ 
+  document.getElementsByClassName('flex3 weeks52')[0].getElementsByTagName('button')[i].style.background = 'DarkSeaGreen';
+  }  
+  //color this week tomato and animation textBlinkerAni
+  document.getElementsByClassName('flex3 weeks52')[0].getElementsByTagName('button')[weekNumber-1].style.background = 'tomato';
+  document.getElementsByClassName('flex3 weeks52')[0].getElementsByTagName('button')[weekNumber-1].style.animation = " textBlinkerAni 0.1s infinite alternate-reverse";
+}
+
+
+// ####################################################################################################
+// ####################################################################################################
+// ####################################################################################################
+// ####################################################################################################
+
+// zxe
+
+runClock();
+
+function runClock(){
+
+let d = new Date();
+
+
+let s = d.getSeconds(); //seconds
+let sAngle = s*6; // 1 second == 6 degree
+let sAngleValue = "rotate(" + sAngle + "deg)"
+document.getElementById('clock1Sec').style.transform = sAngleValue;
+document.getElementById('clock2Sec').style.transform = sAngleValue;
+
+let m = d.getMinutes(); // minutes
+let mAngle = m*6; // 1 second == 6 degree
+let mAngleValue = "rotate(" + mAngle + "deg)"
+document.getElementById('clock1Min').style.transform = mAngleValue;
+document.getElementById('clock2Min').style.transform = mAngleValue;
+
+
+ // hours and day and ampm
+let h1 = new Date().getHours() + setTimeDifference1; // ##modify setTimeDifference1 time hour difference at the beginning
+let h2 = new Date().getHours() + setTimeDifference2; // ##modify setTimeDifference2 time hour difference at the beginning
+let hh1 = 0;
+let hh2 = 0;
+let dd1 = d.getDay();
+let dd2 = d.getDay();
+let ampm1 = '';
+let ampm2 = '';
+let monToSun1 ='BBB';
+let monToSun2 ='BBB';
+
+//time1
+if (h1 >= 24){ hh1 = h1 - 24; dd1 = dd1 + 1; } else{ hh1 = h1 ; dd1 = dd1 ;};
+if (dd1 >= 7){ dd1 = dd1 - 7} else{ dd1 = dd1 } // date over1
+if (hh1 < 12) { ampm1 = 'AM'; } else { ampm1 = 'PM';  } // ampm1
+
+let hAngle = (h1*30) + ( 30 / 60 * m);
+
+let hAngleValue = "rotate(" + hAngle + "deg)"
+document.getElementById('clock1Hr').style.transform = hAngleValue;
+//ampm1
+document.getElementById('clock1Span1').innerHTML = ampm1;
+//day1
+document.getElementById('clock1Span3').innerHTML = monToSun1;
+switch(dd1){
+case 0: monToSun1 = "Sun"; 
+document.getElementById('clock1Span3').style.color = 'palevioletred'; break;
+case 1: monToSun1 = "Mon"; 
+document.getElementById('clock1Span3').style.color = 'black'; break;
+case 2: monToSun1 = "Tue"; break;
+case 3: monToSun1 = "Wed"; break;
+case 4: monToSun1 = "Thu"; break;
+case 5: monToSun1 = "Fri"; break;
+case 6: monToSun1 = "Sat";
+document.getElementById('clock1Span3').style.color = 'grey'; break;
+};
+
+document.getElementById('clock1Span3').innerHTML = monToSun1;
+
+
+////time2
+if (h2 >= 24){ hh2 = h2 - 24; dd2 = dd2 + 1; } else{ hh2 = h2 ; dd2 = dd2 ;};
+if (dd2 >= 7){ dd2 = dd2 - 7} else{ dd2 = dd2 } // date over1
+if (hh2 < 12) { ampm2 = 'AM'; } else { ampm2 = 'PM';  } // ampm2
+
+let hhAngle = (hh2*30) + ( 30 / 60 * m);
+let hhAngleValue = "rotate(" + hhAngle + "deg)"
+document.getElementById('clock2Hr').style.transform = hhAngleValue;
+//ampm2
+document.getElementById('clock2Span1').innerHTML = ampm2;
+//day2
+switch(dd2){
+case 0: monToSun2 = "Sun"; 
+document.getElementById('clock2Span3').style.color = 'indianred'; break;
+case 1: monToSun2 = "Mon"; 
+document.getElementById('clock2Span3').style.color = 'black'; break;
+case 2: monToSun2 = "Tue"; break;
+case 3: monToSun2 = "Wed"; break;
+case 4: monToSun2 = "Thu"; break;
+case 5: monToSun2 = "Fri"; break;
+case 6: monToSun2 = "Sat";
+document.getElementById('clock2Span3').style.color = 'lightblue'; break;
+};
+document.getElementById('clock2Span3').innerHTML = monToSun2;
+
+
+//summerMark
+todayDate = new Date(); 
+thisYear = new Date().getYear() + 1900;
+month4 = 3;
+month10 = 9;
+
+for ( i = 1 ; i <= 7 ; i++){
+  if( new Date(thisYear,month4, i).getDay() == 0 ){ // get first sunday of month4
+    month4FirstSun = new Date(thisYear,month4, i);
+  }
+  if( new Date(thisYear,month10, i).getDay() == 0 ){// get first sunday of month10
+    month10FirstSun = new Date(thisYear,month10, i);
+  }
+}
+
+if(todayDate >= month4FirstSun && todayDate < month10FirstSun){
+    document.getElementById('clock2Span2').innerHTML = 'n' // not summer
+  document.getElementById('clock2Span2').style.color = 'gray' // not summer
+} else{
+  document.getElementById('clock2Span2').style.color = 'darkorange' // summer
+}
+
+
+setTimeout(runClock, 1000);
+
+}
+
+
+</script>
+</body>
+</html>
