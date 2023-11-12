@@ -1,0 +1,291 @@
+01`move
+hjkl
+
+02`updown
+^e^y
+^f^b
+^d^u
+gg
+G
+1G
+10G
+50G
+999999G
+
+03`insert
+i
+a
+I
+A
+u
+^r
+
+04'repeat
+.
+
+05`command
+:w
+:q
+:q!
+:sav a.txt
+:w ^d
+:w tab
+
+06`delete
+dd
+u
+dd
+u
+dw
+dW
+
+07`visual
+vlllllllld
+Vjjjjjjjjd
+^v
+
+09`replacechange
+r
+R
+cc
+cw
+cW
+o
+O
+
+09`copypaste
+p
+P
+yy
+p
+^vjjjjjjy
+p
+Y
+p
+
+10`directory
+vim .
+:e .
+^l
+^g
+
+11`window1
+:sp
+^ww
+^wj
+^wk
+^wc
+:sp a.txt
+:e b.txt
+:e .
+
+12`window2
+:sp
+:sp
+:sp
+:q
+:vsp
+:vsp
+^w|
+^w=
+^wh
+^wl
+:sp
+:q
+ZZ
+^w_
+^w=
+10^w_
+3^w_
+
+13`vimdiff
+vimdiff a.txt b.txt
+^e
+^y
+dp
+do
+
+14`explore
+:Ex
+:Se
+:e /etc/init/
+:Ex
+
+15`directory
+:Ex
+R
+D
+d
+-
+o
+^w=
+^wo
+
+16afind
+/wordfind
+n
+N
+?wordfind
+n
+N
+*
+#
+n
+N
+
+17'helpman
+K
+3K
+2K
+:set kp
+
+18`
+#####################
+#####################
+#####################
+
+19`buffer1
+:ls
+:files
+:buffers
+:sb1
+:ls!
+:sba
+
+20`buffer2
+:b1
+^^
+1^^
+2^^
+3^^
+1^w^^
+
+21'registers1
+:reg
+yy
+:reg
+dd
+dd
+dd
+:reg
+"3p
+:q!
+ls -l ~/.viminfo
+vim ~/.viminfo
+yy
+:wv
+:qw
+:rv
+
+22`registers2
+:reg
+"ay
+"ky
+"ap
+"kp
+:reg
+"Ay
+:reg
+
+23`visualblock
+^v
+c0x1
+^v
+d$
+gv
+I0x1
+gvo
+voo
+
+24`tabstop
+:set tx?
+:set list
+tab
+:set nolist
+:set ts
+:set ts=4
+:set expandtab?
+:set expandtab
+:help 'expandtab'
+>>
+>>
+<<
+:set number
+:set shiftwidth
+:set shiftwidth=4
+:set softtabstop
+:set softtabstop=4
+:set nonumber
+:set nu
+:set ts
+:set sw
+:set expandtab?
+:set sts
+
+25`modeline
+:sp ~/.vimrc
+:sp ~/.vimrinfo
+/*
+* Copyright...
+*
+*
+*vim: nonumber ts=8 noexpandtab sw=8 st=8
+*/
+
+26`listmode
+###########################
+###########################
+###########################
+###########################
+
+27`gww
+###########################
+###########################
+###########################
+###########################
+
+28`increasedecrease
+^a
+1000^a
+^x
+^vjjjj
+g^a
+0x1000
+g^a
+
+29`
+###########################
+###########################
+###########################
+###########################
+
+30`
+###########################
+###########################
+###########################
+###########################
+
+31`
+###########################
+###########################
+###########################
+###########################
+
+32`
+###########################
+###########################
+###########################
+###########################
+
+33`
+###########################
+###########################
+###########################
+###########################
+
+34`
+###########################
+###########################
+###########################
+###########################
+
